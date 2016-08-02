@@ -428,7 +428,7 @@ class TemperatureViewController: UIViewController, CBCentralManagerDelegate, CBP
                     sensorTag?.writeValue(enableBytes, forCharacteristic: characteristic, type: .WithResponse)
                 }
                 
-                if characteristic.UUID == CBUUID(string: Device.HumitidyDataUUID) {
+                if characteristic.UUID == CBUUID(string: Device.HumidityDataUUID) {
                     // Enable Humidity Sensor notifications
                     humidityCharacteristic = characteristic
                     sensorTag?.setNotifyValue(true, forCharacteristic: characteristic)
@@ -467,7 +467,7 @@ class TemperatureViewController: UIViewController, CBCentralManagerDelegate, CBP
         if let dataBytes = characteristic.value {
             if characteristic.UUID == CBUUID(string: Device.TemperatureDataUUID) {
                 calculateTemperature(dataBytes)
-            } else if characteristic.UUID == CBUUID(string: Device.HumitidyDataUUID) {
+            } else if characteristic.UUID == CBUUID(string: Device.HumidityDataUUID) {
                 displayHumidity(dataBytes)
             }
         }

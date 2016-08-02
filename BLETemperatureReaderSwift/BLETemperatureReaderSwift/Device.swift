@@ -35,7 +35,7 @@ struct Device {
     static let TemperatureConfig = "F000AA02-0451-4000-B000-000000000000"
 
     static let HumidityServiceUUID = "F000AA20-0451-4000-B000-000000000000"
-    static let HumitidyDataUUID = "F000AA21-0451-4000-B000-000000000000"
+    static let HumidityDataUUID = "F000AA21-0451-4000-B000-000000000000"
     static let HumidityConfig = "F000AA22-0451-4000-B000-000000000000"
 
     static let SensorDataIndexTempInfrared = 0
