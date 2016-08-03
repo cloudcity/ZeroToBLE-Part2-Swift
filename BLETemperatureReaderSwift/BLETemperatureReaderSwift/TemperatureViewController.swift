@@ -303,12 +303,12 @@ class TemperatureViewController: UIViewController, CBCentralManagerDelegate, CBP
             
             // Initiate Scan for Peripherals
             //Option 1: Scan for all devices
-            //centralManager.scanForPeripheralsWithServices(nil, options: nil)
+            centralManager.scanForPeripheralsWithServices(nil, options: nil)
             
             // Option 2: Scan for devices that have the service you're interested in...
-            let sensorTagAdvertisingUUID = CBUUID(string: Device.SensorTagAdvertisingUUID)
-            print("Scanning for SensorTag adverstising with UUID: \(sensorTagAdvertisingUUID)")
-            centralManager.scanForPeripheralsWithServices([sensorTagAdvertisingUUID], options: nil)
+            //let sensorTagAdvertisingUUID = CBUUID(string: Device.SensorTagAdvertisingUUID)
+            //print("Scanning for SensorTag adverstising with UUID: \(sensorTagAdvertisingUUID)")
+            //centralManager.scanForPeripheralsWithServices([sensorTagAdvertisingUUID], options: nil)
 
         }
         
